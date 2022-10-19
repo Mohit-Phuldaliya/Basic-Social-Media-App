@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from "redux";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
-import reducer from "../reducers/index"; //importing combineRducers from index.js file from reducers folder
+import reducer from "../reducers"; //importing combineRducers from index.js file from reducers folder
 
 let store;
 
