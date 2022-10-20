@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 
 class Login extends Component {
+  constructor(props) {
+    super(props);
+
+    this.emailInputRef = React.createRef();
+    this.passwordInputRef = React.createRef();
+  }
+
+  handleFormSumbit = (e) => {
+    e.preventDefault();
+    console.log("this.emailInputRef", this.emailInputRef);
+    console.log("this.passwordInputRef", this.passwordInputRef);
+  };
   render() {
     return (
       <form className="login-form">
@@ -12,7 +24,7 @@ class Login extends Component {
           <input type="password" placeholder="Password" required />
         </div>
         <div className="field">
-          <button>Log In</button>
+          <button onClick={this.handleFormSumbit}>Log In</button>
         </div>
       </form>
     );

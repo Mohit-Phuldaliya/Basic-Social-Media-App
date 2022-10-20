@@ -28,7 +28,7 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Home posts={posts} />
-          {/* <Login /> */}
+          <Login />
 
           {/* <Switch>
             <Route
